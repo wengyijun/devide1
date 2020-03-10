@@ -108,3 +108,8 @@ http://localhost:3000/users/5e66eeff3393fe307854c81f（put)
 http://localhost:3000/users/5e66eeff3393fe307854c81f（del)
 成功！
 
+npm i jsonwebtoken
+
+实现用户注册，看文件1，密码暴露
+http://localhost:3000/users/（get）
+http://localhost:3000/users/

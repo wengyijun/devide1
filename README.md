@@ -114,4 +114,52 @@ npm i jsonwebtoken
 http://localhost:3000/users/（get）
 
 完善了！！！密码隐藏，put用patch代替，实现单个修改
+http://localhost:3000/users/（post)
+新建
+{
+	"name":"天线小宝2",
+	"password":"123456"
+}
+得到
+{
+    "_id": "5e66fd22c039d93340c0e410",
+    "name": "天线小宝2",
+    "password": "123456",
+    "__v": 0
+}
+http://localhost:3000/users/5e66fd22c039d93340c0e410（patch)
+{
+	"name":"2天线小宝",
+	"password":"123456"
+}
+得
+{
+    "_id": "5e66fd22c039d93340c0e410",
+    "name": "2天线小宝",
+    "__v": 0
+}
 
+http://localhost:3000/users/5e66fd22c039d93340c0e410（patch)
+{
+	
+	"password":"1"
+}
+得
+{
+    "_id": "5e66fd22c039d93340c0e410",
+    "name": "2天线小宝",
+    "__v": 0
+}
+
+http://localhost:3000/users/（post)
+{
+	 "name": "2天线小宝",
+	"password":"1"
+}
+得到
+{
+    "stack": "ConflictError: 用户已经占用\n    at Object.throw (D:\\koa知乎\\舒服的合理结构\\node_modules\\koa\\lib\\context.js:97:11)\n    at create (D:\\koa知乎\\舒服的合理结构\\app\\controllers\\users.js:24:22)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
+    "message": "用户已经占用",
+    "name": "ConflictError",
+    "status": 409
+}

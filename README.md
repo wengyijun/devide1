@@ -163,3 +163,18 @@ http://localhost:3000/users/（post)
     "name": "ConflictError",
     "status": 409
 }
+
+
+
+
+9,实现登录并获取token-batch
+http://localhost:3000/users/login
+(post)
+{
+	 "name": "2天线小宝",
+	"password":"1"
+}
+得到
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTY2ZmQyMmMwMzlkOTMzNDBjMGU0MTAiLCJuYW1lIjoiMuWkqee6v-Wwj-WunSIsImlhdCI6MTU4MzgxNzU5MiwiZXhwIjoxNTgzOTAzOTkyfQ.ONfnDs3F4bzKLb8KR81R6KyhCEeezsABQN-hR-0fetk"
+}

@@ -112,4 +112,6 @@ npm i jsonwebtoken
 
 实现用户注册，看文件1，密码暴露
 http://localhost:3000/users/（get）
-http://localhost:3000/users/
+
+完善了！！！密码隐藏，put用patch代替，实现单个修改
+

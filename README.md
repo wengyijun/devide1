@@ -32,7 +32,7 @@ package.json:中修改
     "dev": "nodemon app"
   },
   
-  
+  5,
   npm i koa-parameter --save
   npm run dev
   http://localhost:3000/users(post)
@@ -40,3 +40,7 @@ package.json:中修改
 	"name":"天线小宝",
 	"age":"0"
 }
+
+
+6,mongoose连接mongodb
+

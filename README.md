@@ -168,15 +168,40 @@ http://localhost:3000/users/（post)
 
 
 9,实现登录并获取token-batch
-http://localhost:3000/users/login
-(post)
+
+http://localhost:3000/users/login(post)
 {
 	 "name": "2天线小宝",
 	"password":"1"
 }
 得到
 {
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTY2ZmQyMmMwMzlkOTMzNDBjMGU0MTAiLCJuYW1lIjoiMuWkqee6v-Wwj-WunSIsImlhdCI6MTU4MzgxNzU5MiwiZXhwIjoxNTgzOTAzOTkyfQ.ONfnDs3F4bzKLb8KR81R6KyhCEeezsABQN-hR-0fetk"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTY2ZmQyMmMwMzlkOTMzNDBjMGU0MTAiLCJuYW1lIjoiMuWkqee6v-Wwj-WunSIsImlhdCI6MTU4MzgzNzI1OSwiZXhwIjoxNTgzOTIzNjU5fQ.tJk8yxtZZPnrv99cJC5dbdm_iWApN2zupdB6BL6WWrc"
+}
+http://localhost:3000/users/5e66fd22c039d93340c0e410(patch) no auth 
+得到
+   "message": "jwt must be provided",
+    "name": "UnauthorizedError",
+    "status": 401
+}
+
+bearer token    token:111111随便写
+得到
+ "message": "jwt malformed",
+    "name": "UnauthorizedError",
+    "status": 401
+}
+打开另一个窗口：2天线小宝对应的id是5e66fd22c039d93340c0e410
+http://localhost:3000/users/5e66fd22c039d93340c0e410（patch）
+{
+	 "name": "2天线小宝",
+	"password":"1"
+}
+得到：
+{
+    "_id": "5e66fd22c039d93340c0e410",
+    "name": "2天线小宝",
+    "__v": 0
 }
 
 

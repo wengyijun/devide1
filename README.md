@@ -44,3 +44,4 @@ package.json:中修改
 
 6,mongoose连接mongodb
 
+7，设计用户模块的schema

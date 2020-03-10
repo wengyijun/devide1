@@ -45,3 +45,66 @@ package.json:中修改
 6,mongoose连接mongodb
 
 7，设计用户模块的schema
+
+8，mongodb增删改查
+http://localhost:3000/users（post)
+{
+	"name":"天线小宝2",
+	"age":0
+}
+得到
+{
+    "_id": "5e66ea1d89ab4d2088c04536",
+    "name": "天线小宝2",
+    "__v": 0
+}
+（get)
+http://localhost:3000/users/5e66ea1d89ab4d2088c04536
+得到{
+    "_id": "5e66ea1d89ab4d2088c04536",
+    "name": "天线小宝2",
+    "__v": 0
+}
+
+添加用户
+http://localhost:3000/users/（post)
+{
+	"name":"天线小宝3",
+	"age":0
+}
+得到
+{
+    "_id": "5e66ec233393fe307854c81e",
+    "name": "天线小宝3",
+    "__v": 0
+}
+
+获取用户列表
+http://localhost:3000/users/
+
+http://localhost:3000/users/（post)
+{
+	"name":"天线小宝4",
+	"age":0
+}
+得{
+    "_id": "5e66ef133393fe307854c820",
+    "name": "天线小宝4",
+    "__v": 0
+}
+
+http://localhost:3000/users/5e66eeff3393fe307854c81f（put)
+{
+	"name":"天线小宝5",
+	"age":0
+}
+得到
+{
+    "_id": "5e66eeff3393fe307854c81f",
+    "name": "天线小宝5",
+    "__v": 0
+}
+
+http://localhost:3000/users/5e66eeff3393fe307854c81f（del)
+成功！
+

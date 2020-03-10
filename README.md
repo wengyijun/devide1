@@ -31,3 +31,12 @@ package.json:中修改
     "start": "cross-env NODE_ENV=production node app",
     "dev": "nodemon app"
   },
+  
+  
+  npm i koa-parameter --save
+  npm run dev
+  http://localhost:3000/users(post)
+  {
+	"name":"天线小宝",
+	"age":"0"
+}

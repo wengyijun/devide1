@@ -178,3 +178,6 @@ http://localhost:3000/users/login
 {
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTY2ZmQyMmMwMzlkOTMzNDBjMGU0MTAiLCJuYW1lIjoiMuWkqee6v-Wwj-WunSIsImlhdCI6MTU4MzgxNzU5MiwiZXhwIjoxNTgzOTAzOTkyfQ.ONfnDs3F4bzKLb8KR81R6KyhCEeezsABQN-hR-0fetk"
 }
+
+
+npm i koa-jwt --save

@@ -13,7 +13,12 @@
 阿里云oss等云服务，推荐在生产环境下使用
 
 直接上传到服务器，不推荐在生产环境中使用
-
+npm i koa-body --save
 安装koa-body替换koa-bodyparser
 设置图片上传目录
 npm uninstall koa-bodyparser --save
+body-----form-data---key(file)----select files(选择图片即可上传到目录下）public-uploads
+
+
+npm i koa-static --save
+

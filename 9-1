@@ -29,3 +29,17 @@ form-data 选择图片
 {
     "url": "http://localhost:3000/uploads/upload_bb856d06a2b7ebf5cdcf46ca44d56446.png"
 }
+
+引入upload。html后
+http://localhost:3000/upload.html
+
+http://localhost:3000/users（get）
+
+http://localhost:3000/upload(post)
+authorization(bearer token)({{token}})
+body-form-data
+file-.png 生成
+{
+    "url": "http://localhost:3000/uploads/upload_5933cdffc366a32b058b08ab35800ec2.png"
+}
+

@@ -22,3 +22,10 @@ body-----form-data---key(file)----select files(选择图片即可上传到目录
 
 npm i koa-static --save
 
+http://localhost:3000/upload（post)
+form-data 选择图片
+生成url
+得到
+{
+    "url": "http://localhost:3000/uploads/upload_bb856d06a2b7ebf5cdcf46ca44d56446.png"
+}

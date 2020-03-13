@@ -43,3 +43,33 @@ file-.png 生成
     "url": "http://localhost:3000/uploads/upload_5933cdffc366a32b058b08ab35800ec2.png"
 }
 
+http://localhost:3000/users/login(post)
+body:
+raw:
+json:
+{
+	 "name": "丁丁背着包包来了",
+	"password":"11111111"
+}
+得到
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTU2M2U4OWFmYjVmMTJiMWM2YTA3ZTYiLCJuYW1lIjoi5LiB5LiB6IOM552A5YyF5YyF5p2l5LqGIiwiaWF0IjoxNTg0MDk1OTQxLCJleHAiOjE1ODQxODIzNDF9.uoYIa4YIQANDksrXuKRaiDe5mJZqIMRg147TP5-H1iY"
+}
+
+http://localhost:3000/users/5e563e89afb5f12b1c6a07e6（patch)
+bearer token ({{token}})
+raw json
+{
+	"password":"11111111",
+	"avatar_url":"http://localhost:3000/uploads/upload_5933cdffc366a32b058b08ab35800ec2.png",
+	"gender":"male"
+}
+得到：
+{
+    "gender": "male",
+    "_id": "5e563e89afb5f12b1c6a07e6",
+    "name": "丁丁背着包包来了",
+    "__v": 0,
+    "password": "11111111",
+    "educations": []
+}

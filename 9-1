@@ -73,3 +73,29 @@ raw json
     "password": "11111111",
     "educations": []
 }
+
+localhost:3000/users(get)
+目标对象：
+[
+    {
+        "gender": "male",
+        "_id": "5e563e89afb5f12b1c6a07e6",
+        "name": "丁丁背着包包来了",
+        "__v": 0,
+        "password": "11111111",
+        "avatar_url": "http://localhost:3000/uploads/upload_5933cdffc366a32b058b08ab35800ec2.png"
+    },
+    
+    
+   localhost:3000/users/5e563e89afb5f12b1c6a07e6（get)
+  得到 {
+    "gender": "male",
+    "_id": "5e563e89afb5f12b1c6a07e6",
+    "name": "丁丁背着包包来了",
+    "__v": 0,
+    "password": "11111111",
+    "avatar_url": "http://localhost:3000/uploads/upload_5933cdffc366a32b058b08ab35800ec2.png"
+}
+
+localhost:3000/users/5e563e89afb5f12b1c6a07e6?fields=locations;business
+localhost:3000/users/5e563e89afb5f12b1c6a07e6?fields=educations;business

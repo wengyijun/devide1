@@ -99,3 +99,125 @@ localhost:3000/users(get)
 
 localhost:3000/users/5e563e89afb5f12b1c6a07e6?fields=locations;business
 localhost:3000/users/5e563e89afb5f12b1c6a07e6?fields=educations;business
+http://localhost:3000/users/login(post)raw json
+{
+	 "name": "丁丁背着包包来了",
+	"password":"11111111"
+}
+
+
+关注某人localhost:3000/users/following/5e56406e0d387c2aac62956c(put)
+status 204
+显示关注谁localhost:3000/users/5e563e89afb5f12b1c6a07e6/following(get)
+[
+    {
+        "gender": "male",
+        "_id": "5e563e89afb5f12b1c6a07e6",
+        "name": "丁丁背着包包来了",
+        "avatar_url": "http://localhost:3000/uploads/upload_5933cdffc366a32b058b08ab35800ec2.png"
+    }
+]
+取消关注：localhost:3000/users/following/5e56406e0d387c2aac62956c（delete）
+
+获取粉丝数接口：
+localhost:3000/users/5e56406e0d387c2aac62956c/followers（get)
+http://localhost:3000/topics（get)
+[]
+
+新建话题：
+http://localhost:3000/topics(post）
+{
+    "name": "hello world"
+}
+得到
+{
+    "_id": "5e73406263b58822900e6309",
+    "name": "hello world",
+    "createdAt": "2020-03-19T09:50:26.545Z",
+    "updatedAt": "2020-03-19T09:50:26.545Z",
+    "__v": 0
+}
+
+http://localhost:3000/topics（get)
+[
+    {
+        "_id": "5e73406263b58822900e6309",
+        "name": "hello world",
+        "createdAt": "2020-03-19T09:50:26.545Z",
+        "updatedAt": "2020-03-19T09:50:26.545Z"
+    },
+    {
+        "_id": "5e734a4363b58822900e630a",
+        "name": "nodejs restful学得很开心",
+        "createdAt": "2020-03-19T10:32:35.849Z",
+        "updatedAt": "2020-03-19T10:32:35.849Z"
+    },
+    {
+        "_id": "5e734a5a63b58822900e630b",
+        "name": "遨游在知识的海洋是幸福的",
+        "createdAt": "2020-03-19T10:32:58.022Z",
+        "updatedAt": "2020-03-19T10:32:58.022Z"
+    },
+    {
+        "_id": "5e734a7a63b58822900e630c",
+        "name": "学习才能挣长财富",
+        "createdAt": "2020-03-19T10:33:30.743Z",
+        "updatedAt": "2020-03-19T10:33:30.743Z"
+    }
+]
+
+http://localhost:3000/topics/5e73406263b58822900e6309(get)获取特定话题
+http://localhost:3000/topics/5e73406263b58822900e6309（patch)
+{
+	"avatar_url":"http://localhost:3000/uploads/upload_5933cdffc366a32b058b08ab35800ec2.png",
+	"gender":"male",
+	"introduction":"你好，世界。这是所有编程语言首先学的第一句话，hello，world"
+}
+http://localhost:3000/topics/5e73406263b58822900e6309?fields=introduction(get）
+得到
+{
+    "_id": "5e73406263b58822900e6309",
+    "name": "hello world",
+    "createdAt": "2020-03-19T09:50:26.545Z",
+    "updatedAt": "2020-03-19T10:37:56.861Z",
+    "avatar_url": "http://localhost:3000/uploads/upload_5933cdffc366a32b058b08ab35800ec2.png",
+    "introduction": "你好，世界。这是所有编程语言首先学的第一句话，hello，world"
+}
+
+http://localhost:3000/topics/5e73406263b58822900e6309（get)
+得到
+{
+    "_id": "5e73406263b58822900e6309",
+    "name": "hello world",
+    "createdAt": "2020-03-19T09:50:26.545Z",
+    "updatedAt": "2020-03-19T10:37:56.861Z",
+    "avatar_url": "http://localhost:3000/uploads/upload_5933cdffc366a32b058b08ab35800ec2.png"
+}
+
+http://localhost:3000/topics?page=1&per_page=10&q=心（get)
+得到
+[
+    {
+        "_id": "5e734a4363b58822900e630a",
+        "name": "nodejs restful学得很开心",
+        "createdAt": "2020-03-19T10:32:35.849Z",
+        "updatedAt": "2020-03-19T10:32:35.849Z"
+    }
+]
+
+http://localhost:3000/users?q=拉（get)
+[
+    {
+        "gender": "male",
+        "_id": "5e5640560d387c2aac62956b",
+        "name": "拉拉端来了点心"
+    }
+]
+http://localhost:3000/topics(post)造话题
+
+http://localhost:3000/users/login(post)
+{
+	 "name": "2天线小宝",
+	"password":"1"
+}
+

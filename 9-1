@@ -221,3 +221,29 @@ http://localhost:3000/users/login(post)
 	"password":"1"
 }
 
+http://localhost:3000/users/5e563e89afb5f12b1c6a07e6
+{
+	"name": "2天线小宝",
+	"password":"11111111",
+	"avatar_url":"http://localhost:3000/uploads/upload_3b5cf393c3b3339a5b4e5cdcb23a2e44.jpg",
+	"gender":"male",
+	"headline":"我来了",
+	"locations":["5e746af2da717636546fca89","5e746af2da717636546fca89"],
+	"business":"5e746af2da717636546fca89"
+}
+
+http://localhost:3000/users/5e563e89afb5f12b1c6a07e6?fields=following(get)
+得到
+{
+	"name": "2天线小宝",
+	"password":"11111111",
+	"avatar_url":"http://localhost:3000/uploads/upload_3b5cf393c3b3339a5b4e5cdcb23a2e44.jpg",
+	"gender":"male",
+	"headline":"我来了",
+	"locations":["5e746af2da717636546fca89","5e746af2da717636546fca89"],
+	"business":"5e746af2da717636546fca89"
+}
+
+http://localhost:3000/users/5e563e89afb5f12b1c6a07e6/followingTopics(get)
+得到
+[]

@@ -247,3 +247,25 @@ http://localhost:3000/users/5e563e89afb5f12b1c6a07e6?fields=following(get)
 http://localhost:3000/users/5e563e89afb5f12b1c6a07e6/followingTopics(get)
 得到
 []
+关注某个话题：(put)
+http://localhost:3000/users/followingTopics/5e746af2da717636546fca89
+status：204
+查看用户关注的话题：（get)
+http://localhost:3000/users/5e563e89afb5f12b1c6a07e6/followingTopics
+http://localhost:3000/users/followingTopics/5e746af2da717636546fca89(del)删除某个话题
+http://localhost:3000/topics/5e746af2da717636546fca89/followers（get)（获取某个话题的粉丝列表）
+http://localhost:3000/questions（post）
+{
+	"title":"我就是我不一样的烟火"
+}
+http://localhost:3000/questions（get)
+http://localhost:3000/questions/5e757a25f2b9cc1e94c55210(del)
+http://localhost:3000/questions/5e757998f2b9cc1e94c5520d（get)
+http://localhost:3000/questions/5e757998f2b9cc1e94c5520d(patch)
+{
+	"topics":["5e746af2da717636546fca89","5e746af2da717636546fca89"]
+}
+http://localhost:3000/questions/5e757998f2b9cc1e94c5520d(get)
+http://localhost:3000/topics/5e746af2da717636546fca89/questions(get)
+http://localhost:3000/questions/5e746af2da717636546fca89/answers（post)
+

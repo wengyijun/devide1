@@ -114,5 +114,16 @@ utils  工具模块文件夹
 index。js入口js
 app.js  应用根组件
 
+http://localhost:3000/
+ 
+npm install -g yarn
+yarn add antd  下载组件库包
+yarn add react-app-rewired customize-cra babel-plugin-import
+yarn add less less-loader
+
+
+引入路由
+yarn add react-router-dom
+
 
 
